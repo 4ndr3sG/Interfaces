@@ -18,7 +18,11 @@ public class Main extends Application {
 	 FXMLLoader loader = new FXMLLoader();
 	 loader.setLocation(Main.class.getResource("Restaurante.fxml"));
 	 rootLayout = (BorderPane) loader.load();
-
+	
+	 Controlador menuController = loader.getController();
+	 menuController.setRootLayout(rootLayout);
+		 
+		 
 	 // Mostramos la escena del BorderPane de la variable rootLayot
 	 Scene scene = new Scene(rootLayout);
 	 primaryStage.setScene(scene);
