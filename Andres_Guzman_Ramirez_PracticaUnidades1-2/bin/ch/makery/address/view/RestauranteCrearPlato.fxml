@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ControladorPlato">
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../img/logoFinal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="Tipo de producto:" />
+                  <ChoiceBox fx:id="categoria" prefWidth="150.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                  <TextField fx:id="txtNombre" prefHeight="0.0" prefWidth="95.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad" />
+                  <ChoiceBox fx:id="cantidad" prefWidth="150.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" />
+                  <TextField fx:id="txtPrecio" />
+                  <Button mnemonicParsing="false" onAction="#agregarAlimento" text="Crear" />
+               </children>
+            </VBox>
+            <TableView fx:id="tableAlimentos" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+              <columns>
+                <TableColumn fx:id="colCategoria" prefWidth="60.0" text="Categoria" />
+                  <TableColumn fx:id="colNombre" prefWidth="58.39996337890625" text="Nombre" />
+                  <TableColumn fx:id="colCantidad" prefWidth="57.60003662109375" text="Cantidad" />
+                  <TableColumn fx:id="colPrecio" prefWidth="39.20001220703125" text="Precio" />
+                  <TableColumn fx:id="colTotal" prefWidth="82.4000244140625" text="TOTAL" />
+              </columns>
+            </TableView>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

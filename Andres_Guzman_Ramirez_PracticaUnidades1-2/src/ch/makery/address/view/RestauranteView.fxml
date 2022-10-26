@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ControladorUno">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+         <children>
+            <Circle accessibleRole="BUTTON" radius="15.0" strokeType="INSIDE">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.043800000101327896" green="0.11218778043985367" blue="0.7300000190734863" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.4884210526943207" green="0.7444210648536682" blue="0.75789475440979" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.2808000147342682" green="0.695624828338623" blue="0.7200000286102295" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.22956965863704681" green="0.1257999986410141" blue="0.7400000095367432" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Empleados">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#inicioSesion" text="Iniciar Sesion" />
+                  <MenuItem id="Ver Horarios" mnemonicParsing="false" onAction="#ingresarEmpleado" text="Ver Horarios" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Carta">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#verCarta" text="Ver Carta" />
+                  <MenuItem mnemonicParsing="false" onAction="#crearAlimentos" text="Realizar Pedidos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Sobre Nosotros">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#sobreNostros" text="About" />
+                  <MenuItem mnemonicParsing="false" onAction="#abrirAyuda" text="Ayuda" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Salir">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#salir" text="Salir" />
+              </items>
+            </Menu>
+        </menus>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #D1F8F0;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../img/logoFinal.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
