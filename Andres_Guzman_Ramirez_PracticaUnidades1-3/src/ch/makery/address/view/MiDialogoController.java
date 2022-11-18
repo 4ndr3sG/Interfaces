@@ -36,6 +36,12 @@ public class MiDialogoController {
     private void initialize() {
     	
     }
+    @FXML
+    void cancelar(ActionEvent event) {
+    	Node source = (Node) event.getSource();
+	    Stage stage = (Stage) source.getScene().getWindow();
+	    stage.close();
+    }
     
     @FXML
     private void cargarUsuario(ActionEvent event) {

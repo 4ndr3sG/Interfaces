@@ -3,6 +3,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import ch.makery.address.model.Empleado;
+import ch.makery.address.model.Pedido;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -13,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 
 public class ControladorEmpleado {
 	
@@ -61,6 +63,38 @@ public class ControladorEmpleado {
     	
         
       
+    }
+    @FXML
+    void eliminarPersona(ActionEvent event) {
+    	Empleado p = this.TablaEmpleados.getSelectionModel().getSelectedItem();
+    	
+    	if(p==null) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+    		alert.setHeaderText(null);
+    		alert.setTitle("Error");
+    		alert.setContentText("Formato incorrecto");
+    		alert.showAndWait();
+    	}
+    	
+    	else {
+    		
+    		this.empleados.remove(p);
+    		this.TablaEmpleados.refresh();
+    		
+    	}
+    }
+
+    @FXML
+    void seleccionar(MouseEvent event) {
+    	Empleado p = this.TablaEmpleados.getSelectionModel().getSelectedItem();
+    	
+    	if(p==null) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+    		alert.setHeaderText(null);
+    		alert.setTitle("Error");
+    		alert.setContentText("Formato incorrecto");
+    		alert.showAndWait();
+    	}
     }
     
     @FXML

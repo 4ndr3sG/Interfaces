@@ -41,7 +41,7 @@ public class ControladorEmpleadosIn {
     		// Se sitúa en el centro del diseño principal
     		// Se crea un nuevo Stage para mostrar el di�logo
 	        Stage dialogStage = new Stage();
-	        dialogStage.setTitle("Crear o editar persona");
+	        dialogStage.setTitle("Acceso Administrador");
 	        dialogStage.initModality(Modality.WINDOW_MODAL);
 	        //dialogStage.initOwner(primaryStage);
 	        Scene scene = new Scene(listadoControles);
@@ -72,7 +72,7 @@ public class ControladorEmpleadosIn {
          		// Se sitúa en el centro del diseño principal
          		// Se crea un nuevo Stage para mostrar el di�logo
     	        Stage dialogStage = new Stage();
-    	        dialogStage.setTitle("Crear o editar persona");
+    	        dialogStage.setTitle("Acceso Administrativo");
     	        dialogStage.initModality(Modality.WINDOW_MODAL);
     	        //dialogStage.initOwner(primaryStage);
     	        Scene scene = new Scene(listadoControles);

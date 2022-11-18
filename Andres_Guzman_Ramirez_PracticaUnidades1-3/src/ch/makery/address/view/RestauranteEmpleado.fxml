@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -12,6 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ControladorEmpleado">
@@ -44,10 +46,26 @@
                   <TextField fx:id="txtApellido" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Turno" />
                   <TextField fx:id="txtTurno" />
-                  <Button mnemonicParsing="false" onAction="#agregarPersona" text="Agregar" />
+                  <HBox alignment="CENTER" spacing="25.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#agregarPersona" style="-fx-background-color: skyblue;" text="Agregar">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#eliminarPersona" style="-fx-background-color: skyblue;" text="Eliminar">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
                </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
             </VBox>
-            <TableView fx:id="TablaEmpleados" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+            <TableView fx:id="TablaEmpleados" onMouseClicked="#seleccionar" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
               <columns>
                 <TableColumn fx:id="colNombre" prefWidth="86.4000244140625" text="Nombre" />
                 <TableColumn fx:id="colApellido" prefWidth="102.39996337890625" text="Apellido" />

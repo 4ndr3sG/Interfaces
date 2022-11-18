@@ -26,9 +26,9 @@
 
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.ControladorPedido">
    <center>
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: LightCyan;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Entrantes">
+          <Tab style="-fx-background-color: LightCyan;" text="Entrantes">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -149,9 +149,16 @@
                                     </VBox>
                                  </children>
                               </GridPane>
-                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <Button mnemonicParsing="false" onAction="#agregarPedidoEntrante" text="Añadir" />
+                                    <Button mnemonicParsing="false" onAction="#agregarPedidoEntrante" style="-fx-background-color: Skyblue;" text="Añadir">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: Skyblue;" text="Eliminar">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font></Button>
                                  </children>
                               </HBox>
                            </children>
@@ -160,7 +167,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Principales">
+          <Tab style="-fx-background-color: PaleTurquoise;" text="Principales">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -207,7 +214,14 @@
                                     <ChoiceBox fx:id="principalesEspa" prefWidth="150.0" GridPane.columnIndex="2" />
                                     <ChoiceBox fx:id="principalesTall" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                     <ChoiceBox fx:id="principalesArr" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button mnemonicParsing="false" onAction="#agregarPedidoPrincipales" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#agregarPedidoPrincipales" style="-fx-background-color: skyblue;" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: skyblue;" text="Eliminar" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="25.0" />
@@ -226,7 +240,7 @@
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Segundos">
+            <Tab style="-fx-background-color: PowderBlue;" text="Segundos">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -277,7 +291,8 @@
                                     </RadioButton>
                                     <RadioButton fx:id="FiletePollo" mnemonicParsing="false" toggleGroup="$segundos" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                     <RadioButton fx:id="Pescado" mnemonicParsing="false" toggleGroup="$segundos" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button mnemonicParsing="false" onAction="#agregarPedidoSegundo" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#agregarPedidoSegundo" style="-fx-background-color: skyblue;" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: skyblue;" text="Eliminar" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="25.0" />
@@ -296,7 +311,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Postres">
+            <Tab style="-fx-background-color: SkyBlue;" text="Postres">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -347,7 +362,11 @@
                                     </RadioButton>
                                     <RadioButton fx:id="Fruta" mnemonicParsing="false" toggleGroup="$postres" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                     <RadioButton fx:id="Cafe" mnemonicParsing="false" toggleGroup="$postres" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button mnemonicParsing="false" onAction="#agregarPedidoPostres" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#agregarPedidoPostres" style="-fx-background-color: skyblue;" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: skyblue;" text="Eliminar" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="25.0" />
@@ -364,7 +383,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Bebidas">
+            <Tab style="-fx-background-color: LightSkyBlue;" text="Bebidas">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -415,7 +434,14 @@
                                     </RadioButton>
                                     <RadioButton fx:id="Refresco" mnemonicParsing="false" toggleGroup="$bebidas" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                                     <RadioButton fx:id="Cerveza" mnemonicParsing="false" toggleGroup="$bebidas" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <Button mnemonicParsing="false" onAction="#agregarPedidoBebidas" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#agregarPedidoBebidas" style="-fx-background-color: skyblue;" text="Agregar" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                    <Button mnemonicParsing="false" onAction="#eliminarProducto" style="-fx-background-color: skyblue;" text="Eliminar" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
                                  </children>
                                  <GridPane.margin>
                                     <Insets left="25.0" />
@@ -435,7 +461,7 @@
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Finalizar">
+            <Tab style="-fx-background-color: DeepSkyBlue;" text="Finalizar">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -521,7 +547,8 @@
                               </HBox>
                            </children>
                         </VBox>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
               </content>
             </Tab>
         </tabs>
@@ -530,7 +557,7 @@
    <right>
       <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tablePedido" prefHeight="334.0" prefWidth="200.0">
+            <TableView fx:id="tablePedido" onMouseClicked="#seleccionar" prefHeight="334.0" prefWidth="200.0">
               <columns>
                 <TableColumn fx:id="colPedido" minWidth="0.0" prefWidth="118.4000244140625" text="PEDIDO" />
                   <TableColumn fx:id="colPrecio" prefWidth="82.39996337890625" text="PRECIO" />

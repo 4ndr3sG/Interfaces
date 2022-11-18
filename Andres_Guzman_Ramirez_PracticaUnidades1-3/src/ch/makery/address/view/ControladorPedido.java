@@ -44,6 +44,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -150,6 +151,40 @@ public class ControladorPedido {
     	}
     }*/
     @FXML
+    void seleccionar(MouseEvent event) {
+    	Pedido p = this.tablePedido.getSelectionModel().getSelectedItem();
+    	
+    	if(p==null) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+    		alert.setHeaderText(null);
+    		alert.setTitle("Error");
+    		alert.setContentText("Formato incorrecto");
+    		alert.showAndWait();
+    	}
+    	
+    }
+
+    
+    @FXML
+    void eliminarProducto(ActionEvent event) {
+    	Pedido p = this.tablePedido.getSelectionModel().getSelectedItem();
+    	
+    	if(p==null) {
+    		Alert alert = new Alert(Alert.AlertType.ERROR);
+    		alert.setHeaderText(null);
+    		alert.setTitle("Error");
+    		alert.setContentText("Formato incorrecto");
+    		alert.showAndWait();
+    	}
+    	else {
+    		precioTotal = precioTotal - p.getPrecio();
+    		this.pedidos.remove(p);
+    		this.tablePedido.refresh();
+    		total.setText(""+precioTotal);
+    	}
+    }
+    
+    @FXML
     void finalizarPedido(ActionEvent event) {
     	
     	if(precioTotal<=0) {
@@ -229,6 +264,8 @@ public class ControladorPedido {
     		this.pedidos.add(p);
     		this.tablePedido.setItems(pedidos);
     		System.out.println(pedido);
+    		total.setText(""+precioTotal);
+    		
     	}
     }
 
@@ -284,6 +321,7 @@ public class ControladorPedido {
     		this.pedidos.add(p);
     		this.tablePedido.setItems(pedidos);
     		System.out.println(pedido);
+    		total.setText(""+precioTotal);
     	}
     	
     	Entrantes.selectedToggleProperty().addListener((observable, oldVal, newVal) -> System.out.println(newVal + " was selected"));
@@ -313,6 +351,7 @@ public class ControladorPedido {
     		this.pedidos.add(p);
     		this.tablePedido.setItems(pedidos);
     		System.out.println(pedido);
+    		total.setText(""+precioTotal);
     	}
     }
 
@@ -359,6 +398,7 @@ public class ControladorPedido {
     		alert.setTitle("Correcto");
     		alert.setContentText("Formato correcto");
     		alert.showAndWait();*/
+    		
 			if (principalesArr.getValue()!="") {
 				Pedido a = new Pedido(pedidoChoice,precio);
 				precioTotal +=precio;
@@ -366,6 +406,7 @@ public class ControladorPedido {
 				if(!this.pedidos.contains(a)) {
 	    		this.pedidos.add(a);
 	    		this.tablePedido.setItems(pedidos);
+	    		total.setText(""+precioTotal);
 	    		}
 			}
 			if (principalesTall.getValue()!="") {
@@ -374,6 +415,7 @@ public class ControladorPedido {
 				if(!this.pedidos.contains(a)) {
 	    		this.pedidos.add(a);
 	    		this.tablePedido.setItems(pedidos);
+	    		total.setText(""+precioTotal);
 	    		}
 			}
 			if (principalesEspa.getValue()!="") {
@@ -382,6 +424,7 @@ public class ControladorPedido {
 				if(!this.pedidos.contains(a)) {
 	    		this.pedidos.add(a);
 	    		this.tablePedido.setItems(pedidos);}
+				total.setText(""+precioTotal);
 			}
     		System.out.println(principalesArr.getValue()!="");
     		principalesTall.setValue("");
@@ -489,6 +532,7 @@ public class ControladorPedido {
     		this.pedidos.add(p);
     		this.tablePedido.setItems(pedidos);
     		System.out.println(pedido);
+    		total.setText(""+precioTotal);
     	}
     	
     }
@@ -512,6 +556,10 @@ public class ControladorPedido {
     	principalesArr.getItems().addAll("Verdura","Pollo","Ternera","Gamba"); 
     	principalesEspa.getItems().addAll("Verdura","Pollo","Ternera","Gamba"); 
     	principalesTall.getItems().addAll("Verdura","Pollo","Ternera","Gamba"); 
+    	
+    	if(precioTotal <= 0) {
+			precioTotal=0;
+		}
     	/*
     	principalesArr.getSelectionModel().selectedItemProperty().addListener(
         		(observable) -> {
