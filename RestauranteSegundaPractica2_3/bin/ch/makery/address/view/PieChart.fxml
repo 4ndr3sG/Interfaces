@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PieChartController">
+   <children>
+      <PieChart fx:id="pieChart" labelLineLength="50.0" legendSide="LEFT" title="Grafico de pedidos" />
+   </children>
+</AnchorPane>
