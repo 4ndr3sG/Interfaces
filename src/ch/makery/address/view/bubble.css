@@ -1,0 +1,6 @@
+/* Estilo de cada serie de datos */
+.default-color0.chart-bubble  { -fx-background-color: #e9967a, #ffa07a; }
+.default-color1.chart-bubble { -fx-background-color: #f5a68c, #aaaacd; }
+
+/* Tamaño de la leyenda para ajustarlo correctamente */
+.chart-legend-item  { -fx-pref-width: 130 }

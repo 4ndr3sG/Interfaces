@@ -1,0 +1,42 @@
+Button:hover {
+	-fx-scale-x: 1.5px;
+    -fx-scale-y: 1.5px;
+	-fx-font-family: "Berlin Sans FB"; 
+	-fx-font-style: italic;
+    -fx-font-size: 16px;
+    -fx-border-radius: 50px;
+}
+.text-field {
+ 	-fx-background-color: derive(blue, 120%);
+	-fx-font-family: "Berlin Sans FB"; 
+	-fx-font-style: italic;
+    -fx-font-size: 16px;
+    -fx-border-radius: 50px;
+}
+Label{
+    -fx-font-size: 18px;
+    -fx-font-family: "Tahoma";
+    -fx-background: #A78732;
+}
+
+#paco:hover { -fx-background-color: #333333;
+             
+}
+#dady:hover { -fx-background-color: #333333;
+              -fx-rotate: 50px
+}
+.text-field:hover {
+ 	-fx-background-color: derive(green, 120%);
+	-fx-font-family: "Berlin Sans FB"; 
+	-fx-font-style: italic;
+    -fx-font-size: 16px;
+    -fx-border-radius: 50px;
+}
+Label:hover{
+	
+    -fx-font-size: 20px;
+    -fx-font-family: "Tahoma";
+    -fx-text-fill: #0097D7;
+    -fx-background: #A78732;
+}
+

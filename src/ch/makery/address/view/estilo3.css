@@ -1,0 +1,11 @@
+#hbox1:hover { -fx-background-color: #333333;
+               -fx-font-size: 22px;
+}
+
+#paco:hover { -fx-background-color: #333333;
+             
+}
+#dady:hover { -fx-background-color: #333333;
+              -fx-rotate: 50px
+}
+

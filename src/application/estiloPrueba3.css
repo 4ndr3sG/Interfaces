@@ -1,0 +1,32 @@
+#titulo { -fx-font-family: "Berlin Sans FB"; 
+         -fx-font-style: italic;
+         -fx-font-size: 36px;
+         -fx-text-fill: #FFFFFF;
+}
+
+#fondo { -fx-background-color: #660099; }
+
+Button { -fx-background-color: #02CF08;
+         -fx-border-color: #FFFFFF;
+         -fx-border-width: 2;
+         -fx-text-fill: #FFCC00;
+         -fx-font-family: "Comic Sans MS";
+         -fx-font-style: italic;
+         -fx-font-size: 28px;
+         -fx-background-radius: 10 10 10 10;
+         -fx-border-radius: 10 10 10 10;
+}
+
+#autor { -fx-font-family: "Berlin Sans FB";
+         -fx-text-fill: #0097D7;
+         -fx-font-size: 12px;
+}
+
+Button:hover { -fx-background-color: #333333;
+               -fx-font-size: 22px;
+}
+
+Button:pressed { -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}

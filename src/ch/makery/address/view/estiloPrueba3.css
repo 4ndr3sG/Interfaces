@@ -1,0 +1,35 @@
+#titulo {
+-fx-font-family: "Hervetica";
+-fx-font-style: italic;
+-fx-font-size: 12px;
+-fx-text-fill: #FFFFFF;
+-fx-background-color: linear-gradient(#00ff00, #00cc00);
+-fx-background-radius: 10px;
+}
+
+#fondo { -fx-background-color: #660099; }
+
+Button {-fx-background-color: linear-gradient(#00ff00, #00cc00);
+-fx-background-radius: 50%;
+-fx-border-radius: 50%;
+-fx-text-fill: white;
+-fx-font-size: 18px;
+-fx-font-weight: bold;
+-fx-padding: 0.5em;
+-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 10, 0, 0, 0);
+-fx-transition: all 0.3s ease-out;
+}
+
+#autor { -fx-font-family: "Berlin Sans FB";
+         -fx-text-fill: #0097D7;
+         -fx-font-size: 12px;
+}
+
+Button:hover { -fx-background-color: linear-gradient(#00cc00, #00ff00);
+
+}
+
+Button:pressed { -fx-background-color: #FFFFFF;
+	-fx-text-fill: #000000;
+	-fx-font-weight: bold;
+}
